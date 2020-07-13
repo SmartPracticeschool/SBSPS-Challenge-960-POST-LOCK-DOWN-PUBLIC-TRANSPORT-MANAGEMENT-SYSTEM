@@ -1,0 +1,681 @@
+﻿<process name="SMART-TRANSPORTATION" version="1.0" bpversion="5.0.11.0" narrative="IBM-HACKTHON- SMART TRANSPORTATION" type="object" runmode="Exclusive" preferredid="71831344-b3c8-447c-9944-5c792d30cc0c">
+  <appdef>
+    <element name="Application Root">
+      <id>b6e3f476-e0d7-40b1-bc8e-2c3c093e9fcd</id>
+      <type>Application</type>
+      <basetype>Application</basetype>
+      <datatype>unknown</datatype>
+      <diagnose>False</diagnose>
+    </element>
+  </appdef>
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <subsheet subsheetid="3ac0a0ca-8a02-4408-b679-5e9b6d403474" type="CleanUp" published="True">
+    <name>Clean Up</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="225f2076-f39a-4856-866f-463b5e897ad6" type="Normal" published="False">
+    <name>REMINDER</name>
+    <view>
+      <camerax>-103</camerax>
+      <cameray>123</cameray>
+      <zoom version="2">0.625</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="7880f13a-60cc-48db-8d4e-30250906012e" type="Normal" published="False">
+    <name>SEND</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="b149571f-7f40-4194-adc9-9daed348ef8b" name="Start" type="Start">
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>46bd8e0b-9850-4611-a77e-c93cd1c4d168</onsuccess>
+  </stage>
+  <stage stageid="46bd8e0b-9850-4611-a77e-c93cd1c4d168" name="End" type="End">
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="df322d3b-2af6-4b5a-af3b-e193208fad16" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <references>
+      <reference>System.Data.dll</reference>
+      <reference>System.Xml.dll</reference>
+      <reference>System.Drawing.dll</reference>
+    </references>
+    <imports>
+      <import>System</import>
+      <import>System.Drawing</import>
+    </imports>
+    <language>visualbasic</language>
+    <globalcode><![CDATA[]]></globalcode>
+    <code><![CDATA[]]></code>
+  </stage>
+  <stage stageid="ae5d814f-8343-4cf2-b2e0-50f7ba622e75" name="Clean Up" type="SubSheetInfo">
+    <subsheetid>3ac0a0ca-8a02-4408-b679-5e9b6d403474</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="59664bcc-0ecb-4039-a7ba-9b7086a53d32" name="Start" type="Start">
+    <subsheetid>3ac0a0ca-8a02-4408-b679-5e9b6d403474</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>695c1b6d-ae59-41db-8374-a5dbb81a76fe</onsuccess>
+  </stage>
+  <stage stageid="695c1b6d-ae59-41db-8374-a5dbb81a76fe" name="End" type="End">
+    <subsheetid>3ac0a0ca-8a02-4408-b679-5e9b6d403474</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="50a52322-2a86-44d6-8cc5-137bd8370c68" name="REMINDER" type="SubSheetInfo">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-510</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="f0d03abf-ab3d-47c8-acf1-567a8e2740d2" name="Start" type="Start">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-45</displayx>
+    <displayy>-330</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="FF0000" />
+    <onsuccess>5c5b8e78-e89c-4a72-8e85-6c78066cc9a6</onsuccess>
+  </stage>
+  <stage stageid="db106522-3b54-462c-81ef-0d3f80800b09" name="End" type="End">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>510</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="333399" />
+  </stage>
+  <stage stageid="3275e3d6-25f4-4236-9fcd-e2afda17d5ad" name="Note1" type="Note">
+    <subsheetid>3ac0a0ca-8a02-4408-b679-5e9b6d403474</subsheetid>
+    <narrative>Clean Up Page
+
+This is an optional page where you might choose to perform some finalisation (or "cleanup") tasks as your business object is closed down.
+
+The cleanup action will be called automatically immediately after closing your business object at the end of a business process.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than before the disposal of the business object.</narrative>
+    <displayx>-180</displayx>
+    <displayy>60</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>230</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="9751031a-8b7e-4d6c-89c1-10f7d95fb034" name="Note2" type="Note">
+    <narrative>Initialise Page
+
+This is an optional page where you might choose to perform some initialisation tasks after your business object is loaded.
+
+The initialise action will be called automatically immediately after loading your business object.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than after the creation of the object.</narrative>
+    <displayx>-180</displayx>
+    <displayy>60</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>230</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="5c5b8e78-e89c-4a72-8e85-6c78066cc9a6" name="CREATE-INSTANCE" type="Action">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-45</displayx>
+    <displayy>-195</displayy>
+    <displaywidth>210</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="800000" />
+    <inputs>
+      <input type="flag" name="Enable Events" narrative="Flag to indicate that events should be enabled / disabled on the attached instance - defaulted to True" expr="" />
+    </inputs>
+    <outputs>
+      <output type="number" name="handle" narrative="An integer which can be used to identify the created instance in subsequent actions" stage="handle" />
+    </outputs>
+    <onsuccess>a933e169-37c6-4bc4-a1fd-1f21c8333dc1</onsuccess>
+    <resource object="MS Excel VBO" action="Create Instance" />
+  </stage>
+  <stage stageid="a933e169-37c6-4bc4-a1fd-1f21c8333dc1" name="WORKBOOK-OPENING" type="Action">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>210</displayx>
+    <displayy>-195</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="339966" />
+    <inputs>
+      <input type="number" name="handle" narrative="The integer handle identifying the instance on which the required workbook should be opened. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="File name" narrative="The path and name of the file which should be opened." expr="&quot;C:\Users\ebe\Desktop\Smart-transportation.xlsx&quot;" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Workbook Name" narrative="The name used by Excel to identify the workbook - usually this is the file name (without the path)." stage="Workbook Name" />
+    </outputs>
+    <onsuccess>0c7c2bcc-da69-4a93-919a-5da26043321c</onsuccess>
+    <resource object="MS Excel VBO" action="Open Workbook" />
+  </stage>
+  <stage stageid="0c7c2bcc-da69-4a93-919a-5da26043321c" name="WORKBOOK-AS-COLLECTION" type="Action">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>510</displayx>
+    <displayy>-195</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="333300" />
+    <inputs>
+      <input type="number" name="handle" narrative="The integer handle identifying the instance on which the worksheet which should be retrieved resides. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="Workbook Name" narrative="The name of the workbook which contains the sheet required. The default empty text indicates the currently active workbook on the specified instance." expr="[Workbook Name]" />
+      <input type="text" name="Worksheet Name" narrative="The name of the worksheet within the specified workbook which should be written to a collection. The default empty text indicates the currently active worksheet within the specified workbook." expr="&quot;Sheet1&quot;" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Data" narrative="The collection containing the data from the specified worksheet - the column IDs will be gleaned from the first row on the sheet being retrieved." stage="Data-excel" />
+    </outputs>
+    <onsuccess>80c0e1f0-9397-4b8f-b7f4-f219ce8593fc</onsuccess>
+    <resource object="MS Excel VBO" action="Get Worksheet As Collection" />
+  </stage>
+  <stage stageid="61dfcc24-3b4a-445e-8194-2dee90ba1fa8" name="handle" type="Data">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-675</displayx>
+    <displayy>75</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="14" style="Bold" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="6cb34b59-2b69-40e6-9867-0604e6ceb099" name="Workbook Name" type="Data">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-495</displayx>
+    <displayy>90</displayy>
+    <displaywidth>270</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="14" style="Bold" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a6b2ad73-551b-44df-b9b5-b0b2aaf6b324" name="Data-excel" type="Collection">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-720</displayx>
+    <displayy>225</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="14" style="Bold" color="000000" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Name" type="text" />
+      <field name="Email" type="text" />
+      <field name="Date" type="date" />
+    </collectioninfo>
+  </stage>
+  <stage stageid="1faae0cb-c14d-4e44-93f5-18f889fd2cbf" name="LOOP-START" type="LoopStart">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="3366FF" />
+    <onsuccess>76e3fd15-2057-4bcc-bc0f-de6ef93c1700</onsuccess>
+    <groupid>3b006140-a7c8-4425-b3e5-e7d1ff5906d0</groupid>
+    <looptype>ForEach</looptype>
+    <loopdata>Data-excel</loopdata>
+  </stage>
+  <stage stageid="aeba5c88-5248-4f06-8975-ebf162a87341" name="LOOP-START" type="LoopEnd">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>285</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="008000" />
+    <onsuccess>593c4e36-8501-48ad-bee0-e1803f52bf28</onsuccess>
+    <groupid>3b006140-a7c8-4425-b3e5-e7d1ff5906d0</groupid>
+  </stage>
+  <stage stageid="76e3fd15-2057-4bcc-bc0f-de6ef93c1700" name="CALCULATION" type="MultipleCalculation">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>15</displayy>
+    <displaywidth>270</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="808000" />
+    <onsuccess>d6d916a3-a8e3-4bb1-a60f-aafa7072d305</onsuccess>
+    <steps>
+      <calculation expression="[Data-excel.Name]" stage="Name" />
+      <calculation expression="[Data-excel.Email]" stage="Email" />
+      <calculation expression="[Data-excel.Date]" stage="Date" />
+      <calculation expression=" Today() - [Date]" stage="Date-difference" />
+    </steps>
+  </stage>
+  <stage stageid="53ac73b6-de0f-48c2-8297-70ec4ff6dc7b" name="Name" type="Data">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-570</displayx>
+    <displayy>315</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="14" style="Bold" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="60840890-053c-47b4-8d9c-7ce66a45a1ed" name="Email" type="Data">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-435</displayx>
+    <displayy>330</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="14" style="Bold" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d64493fa-b3cc-4aed-9f95-c0b02bdca3cf" name="Date" type="Data">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-555</displayx>
+    <displayy>405</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="14" style="Bold" color="000000" />
+    <datatype>date</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="8d6a6f23-8842-4c6d-bdb8-a35ba605dbd2" name="Date-difference" type="Data">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-735</displayx>
+    <displayy>135</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="14" style="Bold" color="000000" />
+    <datatype>timespan</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d6d916a3-a8e3-4bb1-a60f-aafa7072d305" name="CHECK-VALIDITY" type="Decision">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>135</displayy>
+    <displaywidth>210</displaywidth>
+    <displayheight>150</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="333399" />
+    <decision expression="[Date-difference] &gt;= [Date-validity]" />
+    <ontrue>8f85b18d-6f14-43c5-a358-e1140fa2bba0</ontrue>
+    <onfalse>aeba5c88-5248-4f06-8975-ebf162a87341</onfalse>
+  </stage>
+  <stage stageid="8f85b18d-6f14-43c5-a358-e1140fa2bba0" name="CONFIGURE-ADMIN-MAIL-ID" type="Action">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>315</displayx>
+    <displayy>135</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>120</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="333300" />
+    <inputs>
+      <input type="text" name="Username" narrative="The POP3 and SMTP Username" expr="[ADMIN-NAME]" />
+      <input type="password" name="Password" narrative="The POP3 and SMTP Password" expr="[ADMIN-PASSWORD]" />
+      <input type="text" name="POP3 Server" narrative="The POP3 Server address e.g. pop.domain.com" expr="&quot;pop.gmail.com&quot;" />
+      <input type="text" name="SMTP Server" narrative="The SMTP Server address e.g. smtp.domain.com" expr="&quot;smtp.gmail.com&quot;" />
+      <input type="number" name="POP3 Port" narrative="The POP3 Port, e.g. 110 or 995" expr="110" />
+      <input type="number" name="SMTP Port" narrative="The SMTP Port, e.g 25 or 465" expr="587" />
+      <input type="flag" name="POP3 UseSSL" narrative="Whether to use SSL for POP3" expr="True" />
+      <input type="flag" name="SMTP UseSSL" narrative="Whether to use SSL for SMTP" expr="True" />
+    </inputs>
+    <onsuccess>35efb5bf-74ed-458b-93f9-9ff326b05235</onsuccess>
+    <resource object="Email - POP3/SMTP" action="Configure" />
+  </stage>
+  <stage stageid="35efb5bf-74ed-458b-93f9-9ff326b05235" name="EMAIL-SENDING" type="Action">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>555</displayx>
+    <displayy>135</displayy>
+    <displaywidth>210</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="800000" />
+    <inputs>
+      <input type="text" name="From" narrative="The email address of the sender." expr="[ADMIN-NAME]" />
+      <input type="text" name="To" narrative="The email address of the recipient. To address multiple recipients use the format &quot;john.smith@example.com, henry.jones@example.com&quot; OR &quot;John Smith &lt;john.smith@example.com&gt;, Henry Jones &lt;henry.jones@example.com&gt;&quot;." expr="[Email]" />
+      <input type="text" name="Subject" narrative="The subject of the email." expr="!! REMINDER-VALIDITY-EXPIRING-SOON !!" />
+      <input type="text" name="Body" narrative="The body of the email." expr="&quot;Hi,We hope you and your family is safe . This the reminder mail regrading your DIGITAL PASS expiring soon please recharge it soon to avoid deactivation of your E-TICKET.If paid please dont consider&quot;" />
+      <input type="collection" name="Attachments" narrative="A Collection containing a list of files to add to the email as attachments." expr="" />
+      <input type="flag" name="BodyIsHTML" narrative="Indicates if the body should be sent as HTML" expr="False" />
+    </inputs>
+    <onsuccess>b77600d1-ea9c-4653-bfe3-2affb3b64851</onsuccess>
+    <resource object="Email - POP3/SMTP" action="Send Message" />
+  </stage>
+  <stage stageid="1ea43560-a400-4a4a-96c5-4ba166fcc50c" name="Date-validity" type="Data">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-480</displayx>
+    <displayy>195</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="14" style="Bold" color="000000" />
+    <datatype>timespan</datatype>
+    <initialvalue>25.00:00:00</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d05ceffb-9009-4aaf-80fe-116f5a43e901" name="Recover" type="Recover">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>750</displayx>
+    <displayy>135</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="FF6600" />
+    <onsuccess>cb0962c6-5068-4a6f-99b7-07166bdb6773</onsuccess>
+  </stage>
+  <stage stageid="cb0962c6-5068-4a6f-99b7-07166bdb6773" name="Resume" type="Resume">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>750</displayx>
+    <displayy>285</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="003366" />
+    <onsuccess>b77600d1-ea9c-4653-bfe3-2affb3b64851</onsuccess>
+  </stage>
+  <stage stageid="12f1638a-ef28-4b66-a361-3fd39dda1ffe" name="ADMIN-NAME" type="Data">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-750</displayx>
+    <displayy>315</displayy>
+    <displaywidth>300</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="14" style="Bold" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">ebestephan1@gmail.com</initialvalue>
+    <alwaysinit />
+  </stage>
+  <stage stageid="fe26f6f5-10ca-4cfd-8fb9-04b583303e6a" name="ADMIN-PASSWORD" type="Data">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-750</displayx>
+    <displayy>405</displayy>
+    <displaywidth>210</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="14" style="Bold" color="000000" />
+    <datatype>password</datatype>
+    <initialvalueenc>4,23,21,94,4,77,21,37,112,71,70,3,89</initialvalueenc>
+    <alwaysinit />
+  </stage>
+  <stage stageid="165884c9-4303-4cc3-994c-4be2984185ad" name="SEND" type="SubSheetInfo">
+    <subsheetid>7880f13a-60cc-48db-8d4e-30250906012e</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="04fa44c3-88db-40d0-b99b-1a995cfd3746" name="START" type="Start">
+    <subsheetid>7880f13a-60cc-48db-8d4e-30250906012e</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-180</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="FF00FF" />
+    <onsuccess>4540504c-3595-4d80-9865-a5799a9b9d90</onsuccess>
+  </stage>
+  <stage stageid="c8f48548-5d69-4f37-99ee-00c7183aaaf9" name="End" type="End">
+    <subsheetid>7880f13a-60cc-48db-8d4e-30250906012e</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>75</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="993366" />
+  </stage>
+  <stage stageid="4540504c-3595-4d80-9865-a5799a9b9d90" name="CONFIG" type="Action">
+    <subsheetid>7880f13a-60cc-48db-8d4e-30250906012e</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="FF6600" />
+    <inputs>
+      <input type="text" name="Username" narrative="The POP3 and SMTP Username" expr="[ADMIN-NAME]" />
+      <input type="password" name="Password" narrative="The POP3 and SMTP Password" expr="[ADMIN-PASSWORD]" />
+      <input type="text" name="POP3 Server" narrative="The POP3 Server address e.g. pop.domain.com" expr="&quot;pop.gmail.com&quot;" />
+      <input type="text" name="SMTP Server" narrative="The SMTP Server address e.g. smtp.domain.com" expr="&quot;smtp.gmail.com&quot;" />
+      <input type="number" name="POP3 Port" narrative="The POP3 Port, e.g. 110 or 995" expr="110" />
+      <input type="number" name="SMTP Port" narrative="The SMTP Port, e.g 25 or 465" expr="587" />
+      <input type="flag" name="POP3 UseSSL" narrative="Whether to use SSL for POP3" expr="True" />
+      <input type="flag" name="SMTP UseSSL" narrative="Whether to use SSL for SMTP" expr="True" />
+    </inputs>
+    <onsuccess>c9cbb0fc-482f-45ff-acc4-342e4fe297d8</onsuccess>
+    <resource object="Email - POP3/SMTP" action="Configure" />
+  </stage>
+  <stage stageid="c9cbb0fc-482f-45ff-acc4-342e4fe297d8" name="SEND-MESSAGE" type="Action">
+    <subsheetid>7880f13a-60cc-48db-8d4e-30250906012e</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="008000" />
+    <inputs>
+      <input type="text" name="From" narrative="The email address of the sender." expr="[ADMIN-NAME]" />
+      <input type="text" name="To" narrative="The email address of the recipient. To address multiple recipients use the format &quot;john.smith@example.com, henry.jones@example.com&quot; OR &quot;John Smith &lt;john.smith@example.com&gt;, Henry Jones &lt;henry.jones@example.com&gt;&quot;." expr="[ADMIN-NAME]" />
+      <input type="text" name="Subject" narrative="The subject of the email." expr="&quot;Email sent to user&quot;" />
+      <input type="text" name="Body" narrative="The body of the email." expr="&quot;Reminder messages are sent to the user using the below file .Please update the file into the IBM CLOUD OBJECT STORAGE&quot;" />
+      <input type="collection" name="Attachments" narrative="A Collection containing a list of files to add to the email as attachments." expr="[path]" />
+      <input type="flag" name="BodyIsHTML" narrative="Indicates if the body should be sent as HTML" expr="False" />
+    </inputs>
+    <onsuccess>c8f48548-5d69-4f37-99ee-00c7183aaaf9</onsuccess>
+    <resource object="Email - POP3/SMTP" action="Send Message" />
+  </stage>
+  <stage stageid="f7824f48-5451-470c-a4c4-160d141350aa" name="path" type="Collection">
+    <subsheetid>7880f13a-60cc-48db-8d4e-30250906012e</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>225</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="000000" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Path" type="text" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="Path" type="text" value="C:\Users\ebe\Desktop\Smart-transportation.xlsx" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="80c0e1f0-9397-4b8f-b7f4-f219ce8593fc" name="Anchor3" type="Anchor">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>510</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="333300" />
+    <onsuccess>1faae0cb-c14d-4e44-93f5-18f889fd2cbf</onsuccess>
+  </stage>
+  <stage stageid="b77600d1-ea9c-4653-bfe3-2affb3b64851" name="Anchor1" type="Anchor">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>555</displayx>
+    <displayy>285</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="008000" />
+    <onsuccess>aeba5c88-5248-4f06-8975-ebf162a87341</onsuccess>
+  </stage>
+  <stage stageid="bfa1d167-509c-4c64-8428-1d003ec2ff61" name="DATA-VARIABLES" type="Block">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-945</displayx>
+    <displayy>30</displayy>
+    <displaywidth>630</displaywidth>
+    <displayheight>450</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="67e32be1-7130-46cc-b1a6-90e6b66f5dd7" name="EMAIL" type="Block">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>210</displayx>
+    <displayy>45</displayy>
+    <displaywidth>615</displaywidth>
+    <displayheight>150</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="bd351cc1-1955-4ac4-b8f0-5f7e8d16df55" name="EXCEL-OPERATION" type="Block">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-315</displayx>
+    <displayy>-255</displayy>
+    <displaywidth>1020</displaywidth>
+    <displayheight>120</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="593c4e36-8501-48ad-bee0-e1803f52bf28" name="SEND" type="SubSheet">
+    <subsheetid>225f2076-f39a-4856-866f-463b5e897ad6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>390</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>120</displayheight>
+    <font family="Segoe UI" size="16" style="Bold" color="333399" />
+    <onsuccess>db106522-3b54-462c-81ef-0d3f80800b09</onsuccess>
+    <processid>7880f13a-60cc-48db-8d4e-30250906012e</processid>
+  </stage>
+</process>
