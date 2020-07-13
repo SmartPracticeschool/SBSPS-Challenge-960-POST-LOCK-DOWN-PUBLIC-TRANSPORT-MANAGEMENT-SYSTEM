@@ -1,0 +1,1604 @@
+[
+    {
+        "id": "7c26dead.65492",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "517c32a0.405ffc",
+        "type": "ibmiot in",
+        "z": "7c26dead.65492",
+        "authentication": "apiKey",
+        "apiKey": "79f61d3d.c2e1f4",
+        "inputType": "evt",
+        "logicalInterface": "",
+        "ruleId": "",
+        "deviceId": "0029",
+        "applicationId": "",
+        "deviceType": "bus29c",
+        "eventType": "+",
+        "commandType": "",
+        "format": "json",
+        "name": "29C",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allLogicalInterfaces": "",
+        "allEvents": true,
+        "allCommands": "",
+        "allFormats": "",
+        "qos": 0,
+        "x": 180,
+        "y": 120,
+        "wires": [
+            [
+                "5e64a026.9bc09",
+                "1dae3eda.8562e1",
+                "d44fb1a1.7ff1d",
+                "647d6a66.30f094"
+            ]
+        ]
+    },
+    {
+        "id": "22feeab1.ec4026",
+        "type": "ibmiot in",
+        "z": "7c26dead.65492",
+        "authentication": "apiKey",
+        "apiKey": "79f61d3d.c2e1f4",
+        "inputType": "evt",
+        "logicalInterface": "",
+        "ruleId": "",
+        "deviceId": "0028",
+        "applicationId": "",
+        "deviceType": "bus28f",
+        "eventType": "+",
+        "commandType": "",
+        "format": "json",
+        "name": "28f",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allLogicalInterfaces": "",
+        "allEvents": true,
+        "allCommands": "",
+        "allFormats": "",
+        "qos": 0,
+        "x": 170,
+        "y": 480,
+        "wires": [
+            [
+                "bcf1a33b.39f76",
+                "9caf6ffa.3af34",
+                "3ae091.ac7b9f7",
+                "32d49785.e00388"
+            ]
+        ]
+    },
+    {
+        "id": "32d49785.e00388",
+        "type": "debug",
+        "z": "7c26dead.65492",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 690,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "b17f97e5.a86618",
+        "type": "http in",
+        "z": "7c26dead.65492",
+        "name": "",
+        "url": "/28f",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 240,
+        "y": 620,
+        "wires": [
+            [
+                "39eaa634.2f0b4a"
+            ]
+        ]
+    },
+    {
+        "id": "7f167dd.71aa384",
+        "type": "http response",
+        "z": "7c26dead.65492",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 590,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "bcf1a33b.39f76",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "location_28f",
+        "func": "global.set('location28f',msg.payload.d.Location)\nreturn {payload:msg.payload.d.Location}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 520,
+        "wires": [
+            [
+                "32d49785.e00388"
+            ]
+        ]
+    },
+    {
+        "id": "9caf6ffa.3af34",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "count_28f",
+        "func": "global.set('count28f',msg.payload.d.Count)\nreturn {payload:msg.payload.d.Count}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 580,
+        "wires": [
+            [
+                "32d49785.e00388",
+                "b39456fc.a40c88"
+            ]
+        ]
+    },
+    {
+        "id": "39eaa634.2f0b4a",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "28f",
+        "func": "msg.payload={\"location28f\":global.get('location28f'),\"count28f\":global.get('count28f'),\"live28f\":global.get('live28f')}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 640,
+        "wires": [
+            [
+                "7f167dd.71aa384",
+                "1d7b65ec.b21e7a"
+            ]
+        ]
+    },
+    {
+        "id": "5e64a026.9bc09",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "location_29c",
+        "func": "global.set('location29c',msg.payload.d.Location)\nreturn {payload:msg.payload.d.Location}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 460,
+        "y": 180,
+        "wires": [
+            [
+                "647d6a66.30f094"
+            ]
+        ]
+    },
+    {
+        "id": "1dae3eda.8562e1",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "count_29c",
+        "func": "global.set('count29c',msg.payload.d.Count)\nreturn {payload:msg.payload.d.Count}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 460,
+        "y": 260,
+        "wires": [
+            [
+                "647d6a66.30f094",
+                "94e648b1.89b508"
+            ]
+        ]
+    },
+    {
+        "id": "649a3cac.f9d1a4",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "29_c",
+        "func": "msg.payload={\"location28f\":global.get('location29c'),\"count29c\":global.get('count29c'),\"live29c\":global.get('live29c')}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 380,
+        "wires": [
+            [
+                "a2ecc68a.05f188"
+            ]
+        ]
+    },
+    {
+        "id": "4599c620.4bda38",
+        "type": "http in",
+        "z": "7c26dead.65492",
+        "name": "",
+        "url": "/29c",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 380,
+        "wires": [
+            [
+                "649a3cac.f9d1a4"
+            ]
+        ]
+    },
+    {
+        "id": "a2ecc68a.05f188",
+        "type": "http response",
+        "z": "7c26dead.65492",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "be0b4707.40a618",
+        "type": "ibmiot in",
+        "z": "7c26dead.65492",
+        "authentication": "apiKey",
+        "apiKey": "79f61d3d.c2e1f4",
+        "inputType": "evt",
+        "logicalInterface": "",
+        "ruleId": "",
+        "deviceId": "0007",
+        "applicationId": "",
+        "deviceType": "bus7g",
+        "eventType": "+",
+        "commandType": "",
+        "format": "json",
+        "name": "7g",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allLogicalInterfaces": "",
+        "allEvents": true,
+        "allCommands": "",
+        "allFormats": "",
+        "qos": 0,
+        "x": 200,
+        "y": 800,
+        "wires": [
+            [
+                "bf8112fb.18fb9",
+                "816f9f54.26893",
+                "b28596b3.5a0878",
+                "e5935044.40535"
+            ]
+        ]
+    },
+    {
+        "id": "e5935044.40535",
+        "type": "debug",
+        "z": "7c26dead.65492",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 770,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "bf8112fb.18fb9",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "location_7g",
+        "func": "global.set('location7g',msg.payload.d.Location)\nreturn {payload:msg.payload.d.Location}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 840,
+        "wires": [
+            [
+                "e5935044.40535"
+            ]
+        ]
+    },
+    {
+        "id": "816f9f54.26893",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "count7g",
+        "func": "global.set('count7g',msg.payload.d.Count)\nreturn {payload:msg.payload.d.Count}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 463,
+        "y": 905.4000244140625,
+        "wires": [
+            [
+                "e5935044.40535",
+                "613d47f.bd69eb8"
+            ]
+        ]
+    },
+    {
+        "id": "d01b7e6c.5101a",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "7g",
+        "func": "msg.payload={\"location7g\":global.get('location7g'),\"count7g\":global.get('count7g'),\"live7g\":global.get('live7g')}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 960,
+        "wires": [
+            [
+                "865fa886.0437c8"
+            ]
+        ]
+    },
+    {
+        "id": "c45b4229.3ed34",
+        "type": "http in",
+        "z": "7c26dead.65492",
+        "name": "",
+        "url": "/7g",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 220,
+        "y": 960,
+        "wires": [
+            [
+                "d01b7e6c.5101a"
+            ]
+        ]
+    },
+    {
+        "id": "865fa886.0437c8",
+        "type": "http response",
+        "z": "7c26dead.65492",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 750,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "cd7cdd56.6beda",
+        "type": "ibmiot in",
+        "z": "7c26dead.65492",
+        "authentication": "apiKey",
+        "apiKey": "79f61d3d.c2e1f4",
+        "inputType": "evt",
+        "logicalInterface": "",
+        "ruleId": "",
+        "deviceId": "0012",
+        "applicationId": "",
+        "deviceType": "bus12a",
+        "eventType": "+",
+        "commandType": "",
+        "format": "json",
+        "name": "12a",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allLogicalInterfaces": "",
+        "allEvents": "",
+        "allCommands": "",
+        "allFormats": "",
+        "qos": 0,
+        "x": 220,
+        "y": 1100,
+        "wires": [
+            [
+                "2bde7d60.314d12",
+                "633a3ba5.b84384",
+                "8fb98569.767588",
+                "b64695fb.712488"
+            ]
+        ]
+    },
+    {
+        "id": "2bde7d60.314d12",
+        "type": "debug",
+        "z": "7c26dead.65492",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 690,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "8fb98569.767588",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "count_12a",
+        "func": "global.set('count12a',msg.payload.d.Count)\nreturn {payload:msg.payload.d.Count}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 1200,
+        "wires": [
+            [
+                "2bde7d60.314d12",
+                "cd91bc9c.d258d"
+            ]
+        ]
+    },
+    {
+        "id": "633a3ba5.b84384",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "location_12a",
+        "func": "global.set('location12a',msg.payload.d.Location)\nreturn {payload:msg.payload.d.Location}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 1140,
+        "wires": [
+            [
+                "2bde7d60.314d12"
+            ]
+        ]
+    },
+    {
+        "id": "e35c3c6.5de0dc",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "12_a",
+        "func": "msg.payload={\"location12a\":global.get('location12a'),\"count12a\":global.get('count12a'),\"live12a\":global.get('live12a')}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 1280,
+        "wires": [
+            [
+                "df98f432.866c38"
+            ]
+        ]
+    },
+    {
+        "id": "b819c85d.f00368",
+        "type": "http in",
+        "z": "7c26dead.65492",
+        "name": "",
+        "url": "/12a",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 230,
+        "y": 1280,
+        "wires": [
+            [
+                "e35c3c6.5de0dc"
+            ]
+        ]
+    },
+    {
+        "id": "df98f432.866c38",
+        "type": "http response",
+        "z": "7c26dead.65492",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 700,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "f98cd9f5.96f138",
+        "type": "ibmiot in",
+        "z": "7c26dead.65492",
+        "authentication": "apiKey",
+        "apiKey": "79f61d3d.c2e1f4",
+        "inputType": "evt",
+        "logicalInterface": "",
+        "ruleId": "",
+        "deviceId": "0046",
+        "applicationId": "",
+        "deviceType": "bus46g",
+        "eventType": "+",
+        "commandType": "",
+        "format": "json",
+        "name": "46g",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allLogicalInterfaces": "",
+        "allEvents": "",
+        "allCommands": "",
+        "allFormats": "",
+        "qos": 0,
+        "x": 196,
+        "y": 1412,
+        "wires": [
+            [
+                "b4c03ba3.ee1c08",
+                "b7c94139.838d5",
+                "e44562d4.d3db3",
+                "d2d8261e.264228"
+            ]
+        ]
+    },
+    {
+        "id": "d2d8261e.264228",
+        "type": "debug",
+        "z": "7c26dead.65492",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 770,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "b7c94139.838d5",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "count_46g",
+        "func": "global.set('count46g',msg.payload.d.Count)\nreturn {payload:msg.payload.d.Count}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 426,
+        "y": 1512,
+        "wires": [
+            [
+                "d2d8261e.264228"
+            ]
+        ]
+    },
+    {
+        "id": "b4c03ba3.ee1c08",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "location_46g",
+        "func": "global.set('location46g',msg.payload.d.Location)\nreturn {payload:msg.payload.d.Location}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 406,
+        "y": 1452,
+        "wires": [
+            [
+                "d2d8261e.264228"
+            ]
+        ]
+    },
+    {
+        "id": "f4ee75ef.d92f38",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "46g",
+        "func": "msg.payload={\"location46g\":global.get('location46g'),\"count46g\":global.get('count46g'),\"live46g\":global.get('live46g')}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 396,
+        "y": 1592,
+        "wires": [
+            [
+                "7461f83c.af60e8"
+            ]
+        ]
+    },
+    {
+        "id": "9e9e59bd.c1d158",
+        "type": "http in",
+        "z": "7c26dead.65492",
+        "name": "",
+        "url": "/46g",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 206,
+        "y": 1592,
+        "wires": [
+            [
+                "f4ee75ef.d92f38"
+            ]
+        ]
+    },
+    {
+        "id": "7461f83c.af60e8",
+        "type": "http response",
+        "z": "7c26dead.65492",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 676,
+        "y": 1572,
+        "wires": []
+    },
+    {
+        "id": "2db5c2b1.05468e",
+        "type": "ibmiot in",
+        "z": "7c26dead.65492",
+        "authentication": "apiKey",
+        "apiKey": "79f61d3d.c2e1f4",
+        "inputType": "evt",
+        "logicalInterface": "",
+        "ruleId": "",
+        "deviceId": "0006",
+        "applicationId": "",
+        "deviceType": "bus6a",
+        "eventType": "+",
+        "commandType": "",
+        "format": "json",
+        "name": "6a",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allLogicalInterfaces": "",
+        "allEvents": "",
+        "allCommands": "",
+        "allFormats": "",
+        "qos": 0,
+        "x": 190,
+        "y": 1700,
+        "wires": [
+            [
+                "f88d3a7f.b66e28",
+                "b2527d6.d406d8",
+                "3aff7f9b.acd2e",
+                "cc7f03b5.12fae"
+            ]
+        ]
+    },
+    {
+        "id": "cc7f03b5.12fae",
+        "type": "debug",
+        "z": "7c26dead.65492",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 670,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "b2527d6.d406d8",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "count_6a",
+        "func": "global.set('count6a',msg.payload.d.Count)\nreturn {payload:msg.payload.d.Count}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 1800,
+        "wires": [
+            [
+                "cc7f03b5.12fae"
+            ]
+        ]
+    },
+    {
+        "id": "f88d3a7f.b66e28",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "location_6a",
+        "func": "global.set('location6a',msg.payload.d.Location)\nreturn {payload:msg.payload.d.Location}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 400,
+        "y": 1740,
+        "wires": [
+            [
+                "cc7f03b5.12fae"
+            ]
+        ]
+    },
+    {
+        "id": "a36d38a1.e74c88",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "6a",
+        "func": "msg.payload={\"location6a\":global.get('location6a'),\"count6a\":global.get('count6a'),\"live6a\":global.get('live6a')}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 390,
+        "y": 1880,
+        "wires": [
+            [
+                "f5ec4ce2.a0517"
+            ]
+        ]
+    },
+    {
+        "id": "27ca28f9.2c45c8",
+        "type": "http in",
+        "z": "7c26dead.65492",
+        "name": "",
+        "url": "/6a",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 1880,
+        "wires": [
+            [
+                "a36d38a1.e74c88"
+            ]
+        ]
+    },
+    {
+        "id": "f5ec4ce2.a0517",
+        "type": "http response",
+        "z": "7c26dead.65492",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 670,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "12cefa66.d07496",
+        "type": "ibmiot in",
+        "z": "7c26dead.65492",
+        "authentication": "apiKey",
+        "apiKey": "79f61d3d.c2e1f4",
+        "inputType": "evt",
+        "logicalInterface": "",
+        "ruleId": "",
+        "deviceId": "0023",
+        "applicationId": "",
+        "deviceType": "bus23e",
+        "eventType": "+",
+        "commandType": "",
+        "format": "json",
+        "name": "23e",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allLogicalInterfaces": "",
+        "allEvents": "",
+        "allCommands": "",
+        "allFormats": "",
+        "qos": 0,
+        "x": 150,
+        "y": 2040,
+        "wires": [
+            [
+                "266dacb9.920464",
+                "d4f518d2.292488",
+                "583a480d.d8c378",
+                "aec4b04f.eeaf9"
+            ]
+        ]
+    },
+    {
+        "id": "aec4b04f.eeaf9",
+        "type": "debug",
+        "z": "7c26dead.65492",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 620,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "d4f518d2.292488",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "count_23e",
+        "func": "global.set('count23e',msg.payload.d.Count)\nreturn {payload:msg.payload.d.Count}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 380,
+        "y": 2140,
+        "wires": [
+            [
+                "aec4b04f.eeaf9"
+            ]
+        ]
+    },
+    {
+        "id": "266dacb9.920464",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "location_23e",
+        "func": "global.set('location23e',msg.payload.d.Location)\nreturn {payload:msg.payload.d.Location}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 2080,
+        "wires": [
+            [
+                "aec4b04f.eeaf9"
+            ]
+        ]
+    },
+    {
+        "id": "d737864b.875f38",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "23e",
+        "func": "msg.payload={\"location23e\":global.get('location23e'),\"count23e\":global.get('count23e'),\"live23e\":global.get('live23e')}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 2220,
+        "wires": [
+            [
+                "c381b7c6.315448"
+            ]
+        ]
+    },
+    {
+        "id": "f64c4a0e.35e478",
+        "type": "http in",
+        "z": "7c26dead.65492",
+        "name": "",
+        "url": "/23e",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 2220,
+        "wires": [
+            [
+                "d737864b.875f38"
+            ]
+        ]
+    },
+    {
+        "id": "c381b7c6.315448",
+        "type": "http response",
+        "z": "7c26dead.65492",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 630,
+        "y": 2200,
+        "wires": []
+    },
+    {
+        "id": "3ae091.ac7b9f7",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "live28f",
+        "func": "global.set('live28f',msg.payload.d.Live)\nreturn {payload:msg.payload.d.Live}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 460,
+        "wires": [
+            [
+                "32d49785.e00388"
+            ]
+        ]
+    },
+    {
+        "id": "d44fb1a1.7ff1d",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "live29c",
+        "func": "global.set('live29c',msg.payload.d.Live)\nreturn {payload:msg.payload.d.Live}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 140,
+        "wires": [
+            [
+                "647d6a66.30f094"
+            ]
+        ]
+    },
+    {
+        "id": "647d6a66.30f094",
+        "type": "debug",
+        "z": "7c26dead.65492",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 680,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "b28596b3.5a0878",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "live_7g",
+        "func": "global.set('live7g',msg.payload.d.Live)\nreturn {payload:msg.payload.d.Live}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 780,
+        "wires": [
+            [
+                "e5935044.40535"
+            ]
+        ]
+    },
+    {
+        "id": "94e648b1.89b508",
+        "type": "ui_gauge",
+        "z": "7c26dead.65492",
+        "name": "bus_29c",
+        "group": "680cec11.38e8c4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Bus_29c",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e66f00",
+            "#ca3838"
+        ],
+        "seg1": "30",
+        "seg2": "40",
+        "x": 800,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "b39456fc.a40c88",
+        "type": "ui_gauge",
+        "z": "7c26dead.65492",
+        "name": "bus_28f",
+        "group": "680cec11.38e8c4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Bus_28f",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e66f00",
+            "#ca3838"
+        ],
+        "seg1": "30",
+        "seg2": "40",
+        "x": 680,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "613d47f.bd69eb8",
+        "type": "ui_gauge",
+        "z": "7c26dead.65492",
+        "name": "bus_7g",
+        "group": "680cec11.38e8c4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Bus_7g",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e66f00",
+            "#ca3838"
+        ],
+        "seg1": "30",
+        "seg2": "40",
+        "x": 720,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "cd91bc9c.d258d",
+        "type": "ui_gauge",
+        "z": "7c26dead.65492",
+        "name": "bus_12a",
+        "group": "7e93cf49.13b68",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Bus_12a",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e66f00",
+            "#ca3838"
+        ],
+        "seg1": "30",
+        "seg2": "40",
+        "x": 700,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "1d7b65ec.b21e7a",
+        "type": "debug",
+        "z": "7c26dead.65492",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 580,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "b64695fb.712488",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "live_12a",
+        "func": "global.set('live12a',msg.payload.d.Live)\nreturn {payload:msg.payload.d.Live}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 1080,
+        "wires": [
+            [
+                "2bde7d60.314d12"
+            ]
+        ]
+    },
+    {
+        "id": "e44562d4.d3db3",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "live_46g",
+        "func": "global.set('live46g',msg.payload.d.Live)\nreturn {payload:msg.payload.d.Live}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 1400,
+        "wires": [
+            [
+                "d2d8261e.264228"
+            ]
+        ]
+    },
+    {
+        "id": "3aff7f9b.acd2e",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "live_6a",
+        "func": "global.set('live6a',msg.payload.d.Live)\nreturn {payload:msg.payload.d.Live}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 1700,
+        "wires": [
+            [
+                "cc7f03b5.12fae"
+            ]
+        ]
+    },
+    {
+        "id": "583a480d.d8c378",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "live_23e",
+        "func": "global.set('live23e',msg.payload.d.Live)\nreturn {payload:msg.payload.d.Live}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 2000,
+        "wires": [
+            [
+                "aec4b04f.eeaf9"
+            ]
+        ]
+    },
+    {
+        "id": "a0c9483c.3443f8",
+        "type": "ibmiot in",
+        "z": "7c26dead.65492",
+        "authentication": "apiKey",
+        "apiKey": "79f61d3d.c2e1f4",
+        "inputType": "evt",
+        "logicalInterface": "",
+        "ruleId": "",
+        "deviceId": "0025",
+        "applicationId": "",
+        "deviceType": "bus25s",
+        "eventType": "+",
+        "commandType": "",
+        "format": "json",
+        "name": "25s",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allLogicalInterfaces": "",
+        "allEvents": "",
+        "allCommands": "",
+        "allFormats": "",
+        "qos": 0,
+        "x": 190,
+        "y": 2340,
+        "wires": [
+            [
+                "df33fcc.a472e",
+                "b63c1492.106328",
+                "f3ed287d.18acb8",
+                "5e166c71.0ffa64"
+            ]
+        ]
+    },
+    {
+        "id": "5e166c71.0ffa64",
+        "type": "debug",
+        "z": "7c26dead.65492",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 660,
+        "y": 2340,
+        "wires": []
+    },
+    {
+        "id": "b63c1492.106328",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "count_23e",
+        "func": "global.set('count25s',msg.payload.d.Count)\nreturn {payload:msg.payload.d.Count}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 2440,
+        "wires": [
+            [
+                "5e166c71.0ffa64"
+            ]
+        ]
+    },
+    {
+        "id": "df33fcc.a472e",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "location_25s",
+        "func": "global.set('location25s',msg.payload.d.Location)\nreturn {payload:msg.payload.d.Location}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 400,
+        "y": 2380,
+        "wires": [
+            [
+                "5e166c71.0ffa64"
+            ]
+        ]
+    },
+    {
+        "id": "9623c25c.4346",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "25s",
+        "func": "msg.payload={\"location25s\":global.get('location25s'),\"count25s\":global.get('count25s'),\"live25s\":global.get('live25s')}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 390,
+        "y": 2520,
+        "wires": [
+            [
+                "115d1ab7.806d95"
+            ]
+        ]
+    },
+    {
+        "id": "dc36188f.f11b88",
+        "type": "http in",
+        "z": "7c26dead.65492",
+        "name": "",
+        "url": "/25s",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 2520,
+        "wires": [
+            [
+                "9623c25c.4346"
+            ]
+        ]
+    },
+    {
+        "id": "115d1ab7.806d95",
+        "type": "http response",
+        "z": "7c26dead.65492",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 670,
+        "y": 2500,
+        "wires": []
+    },
+    {
+        "id": "f3ed287d.18acb8",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "live_25s",
+        "func": "global.set('live25s',msg.payload.d.Live)\nreturn {payload:msg.payload.d.Live}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 2300,
+        "wires": [
+            [
+                "5e166c71.0ffa64"
+            ]
+        ]
+    },
+    {
+        "id": "502b5259.eb15ac",
+        "type": "ibmiot in",
+        "z": "7c26dead.65492",
+        "authentication": "apiKey",
+        "apiKey": "79f61d3d.c2e1f4",
+        "inputType": "evt",
+        "logicalInterface": "",
+        "ruleId": "",
+        "deviceId": "0030",
+        "applicationId": "",
+        "deviceType": "bus30a",
+        "eventType": "+",
+        "commandType": "",
+        "format": "json",
+        "name": "30a",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allLogicalInterfaces": "",
+        "allEvents": "",
+        "allCommands": "",
+        "allFormats": "",
+        "qos": 0,
+        "x": 150,
+        "y": 2660,
+        "wires": [
+            [
+                "16663e55.4020c2",
+                "794d5cd9.532904",
+                "b2c58817.2b9c88",
+                "45003f35.9ccbf"
+            ]
+        ]
+    },
+    {
+        "id": "45003f35.9ccbf",
+        "type": "debug",
+        "z": "7c26dead.65492",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 620,
+        "y": 2660,
+        "wires": []
+    },
+    {
+        "id": "794d5cd9.532904",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "count_30a",
+        "func": "global.set('count30a',msg.payload.d.Count)\nreturn {payload:msg.payload.d.Count}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 380,
+        "y": 2760,
+        "wires": [
+            [
+                "45003f35.9ccbf"
+            ]
+        ]
+    },
+    {
+        "id": "16663e55.4020c2",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "location_30a",
+        "func": "global.set('location30a',msg.payload.d.Location)\nreturn {payload:msg.payload.d.Location}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 2700,
+        "wires": [
+            [
+                "45003f35.9ccbf"
+            ]
+        ]
+    },
+    {
+        "id": "c9bd2d4d.63337",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "30a",
+        "func": "msg.payload={\"location30a\":global.get('location30a'),\"count30a\":global.get('count30a'),\"live30a\":global.get('live30a')}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 2840,
+        "wires": [
+            [
+                "ec14f6e0.42f858"
+            ]
+        ]
+    },
+    {
+        "id": "55be1315.75218c",
+        "type": "http in",
+        "z": "7c26dead.65492",
+        "name": "",
+        "url": "/30a",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 2840,
+        "wires": [
+            [
+                "c9bd2d4d.63337"
+            ]
+        ]
+    },
+    {
+        "id": "ec14f6e0.42f858",
+        "type": "http response",
+        "z": "7c26dead.65492",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 630,
+        "y": 2820,
+        "wires": []
+    },
+    {
+        "id": "b2c58817.2b9c88",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "live_30a",
+        "func": "global.set('live30a',msg.payload.d.Live)\nreturn {payload:msg.payload.d.Live}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 2620,
+        "wires": [
+            [
+                "45003f35.9ccbf"
+            ]
+        ]
+    },
+    {
+        "id": "8b6c3bab.ef67f8",
+        "type": "ibmiot in",
+        "z": "7c26dead.65492",
+        "authentication": "apiKey",
+        "apiKey": "79f61d3d.c2e1f4",
+        "inputType": "evt",
+        "logicalInterface": "",
+        "ruleId": "",
+        "deviceId": "0001",
+        "applicationId": "",
+        "deviceType": "bus1a",
+        "eventType": "+",
+        "commandType": "",
+        "format": "json",
+        "name": "1a",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allLogicalInterfaces": "",
+        "allEvents": "",
+        "allCommands": "",
+        "allFormats": "",
+        "qos": 0,
+        "x": 160,
+        "y": 3034.800048828125,
+        "wires": [
+            [
+                "75b50e94.11676",
+                "e5473f6e.4fd0f",
+                "d3b3320d.1ecba",
+                "d931a1c1.56eb7"
+            ]
+        ]
+    },
+    {
+        "id": "d931a1c1.56eb7",
+        "type": "debug",
+        "z": "7c26dead.65492",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 630,
+        "y": 3034.800048828125,
+        "wires": []
+    },
+    {
+        "id": "e5473f6e.4fd0f",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "count_1a",
+        "func": "global.set('count1a',msg.payload.d.Count)\nreturn {payload:msg.payload.d.Count}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 380,
+        "y": 3134.800048828125,
+        "wires": [
+            [
+                "d931a1c1.56eb7"
+            ]
+        ]
+    },
+    {
+        "id": "75b50e94.11676",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "location_1a",
+        "func": "global.set('location1a',msg.payload.d.Location)\nreturn {payload:msg.payload.d.Location}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 3074.800048828125,
+        "wires": [
+            [
+                "d931a1c1.56eb7"
+            ]
+        ]
+    },
+    {
+        "id": "98767c11.6f949",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "23e",
+        "func": "msg.payload={\"location1a\":global.get('location1a'),\"count1a\":global.get('count1a'),\"live1a\":global.get('live1a')}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 3214.800048828125,
+        "wires": [
+            [
+                "a2b8f69b.d61f48"
+            ]
+        ]
+    },
+    {
+        "id": "77729135.ebb85",
+        "type": "http in",
+        "z": "7c26dead.65492",
+        "name": "",
+        "url": "/1a",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 3214.800048828125,
+        "wires": [
+            [
+                "98767c11.6f949"
+            ]
+        ]
+    },
+    {
+        "id": "a2b8f69b.d61f48",
+        "type": "http response",
+        "z": "7c26dead.65492",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 640,
+        "y": 3194.800048828125,
+        "wires": []
+    },
+    {
+        "id": "d3b3320d.1ecba",
+        "type": "function",
+        "z": "7c26dead.65492",
+        "name": "live_1a",
+        "func": "global.set('live1a',msg.payload.d.Live)\nreturn {payload:msg.payload.d.Live}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 2994.800048828125,
+        "wires": [
+            [
+                "d931a1c1.56eb7"
+            ]
+        ]
+    },
+    {
+        "id": "79f61d3d.c2e1f4",
+        "type": "ibmiot",
+        "z": "",
+        "name": "api",
+        "keepalive": "60",
+        "serverName": "xkpuae.messaging.internetofthings.ibmcloud.com",
+        "cleansession": true,
+        "appId": "",
+        "shared": false
+    },
+    {
+        "id": "680cec11.38e8c4",
+        "type": "ui_group",
+        "z": "",
+        "name": "details_bus",
+        "tab": "f8514576.b77148",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "7e93cf49.13b68",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default",
+        "tab": "76bfdc9e.04e814",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "f8514576.b77148",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "76bfdc9e.04e814",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
