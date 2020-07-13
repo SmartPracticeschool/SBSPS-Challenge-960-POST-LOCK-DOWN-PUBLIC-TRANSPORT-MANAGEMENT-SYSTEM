@@ -1,5 +1,5 @@
 # SBSPS-Challenge-960-POST-LOCK-DOWN-PUBLIC-TRANSPORT-MANAGEMENT-SYSTEM
-Pandemic-public-transit-guidence
+Pandemic-public-transit-guidence / Smart-transport management
 
 Abstract: (Problem statement)
 
