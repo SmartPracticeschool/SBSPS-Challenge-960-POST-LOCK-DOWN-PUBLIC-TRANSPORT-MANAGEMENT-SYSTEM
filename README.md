@@ -7,3 +7,4 @@ In India, there about 120-150 million passengers use public transport daily. Kee
 
 The above project is based on maintaining social distancing while travelling in public transit
 
+Android app :  https://drive.google.com/file/d/10J9Hv8FCY9LfobjE79V1H1ebYfxaah35/view?usp=sharing
